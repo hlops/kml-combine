@@ -1,0 +1,13 @@
+.*/
+.*
+*-*.*.*
+package.json
+package-lock.json
+build/
+dist/
+docker/
+logs/
+node_modules/
+target/
+locale/
+bundle/

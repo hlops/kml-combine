@@ -1,0 +1,8 @@
+{
+  "server-port": 8088,
+  "queue-size": 5,
+  "sources": {
+    "NMEA Simulator": "localhost:55555",
+    "test": "sinagot.net:5001"
+  }
+}

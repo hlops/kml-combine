@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+	<Style id="yellowLineGreenPoly">
+		<LineStyle>
+			 <color>7f00ffff</color>
+			 <width>4</width>
+		</LineStyle>
+		<PolyStyle>
+			<color>7f00ff00</color>
+		</PolyStyle>
+	</Style>
+
+	{{#each clients}}
+		<Placemark>
+			<name>{{name}}</name>
+			<styleUrl>#yellowLineGreenPoly</styleUrl>
+			<LineString>
+					<coordinates>
+				{{#each queue.all}}
+						{{#each data}}
+							{{lat}},{{lon}}
+						{{/each}}
+				{{/each}}
+					</coordinates>
+			</LineString>
+		</Placemark>
+	{{/each}}
+</kml>

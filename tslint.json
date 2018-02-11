@@ -1,0 +1,35 @@
+{
+	"extends": ["tslint:recommended", "tslint-config-prettier"],
+	"jsRules": {
+		"indent": [true, "tabs"],
+		"quotemark": [true, "single", "avoid-escape"],
+		"trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
+		"max-line-length": [false]
+	},
+	"rules": {
+		"align": [],
+		"arrow-parens": [true, "ban-single-arg-parens"],
+		"indent": [true, "tabs"],
+		"interface-name": [true, "never-prefix"],
+		"max-classes-per-file": [false],
+		"max-line-length": [false],
+		"no-angle-bracket-type-assertion": false,
+		"no-console": ["log"],
+		"no-empty": false,
+		"no-var-requires": false,
+		"object-literal-key-quotes": [true, "as-needed"],
+		"object-literal-shorthand": false,
+		"object-literal-sort-keys": false,
+		"ordered-imports": false,
+		"prefer-const": true,
+		"quotemark": [true, "single", "avoid-escape", "jsx-double"],
+		"trailing-comma": [true, { "multiline": "never", "singleline": "never" }],
+		"variable-name": [
+			true,
+			"ban-keywords",
+			"check-format",
+			"allow-pascal-case",
+			"allow-leading-underscore"
+		]
+	}
+}

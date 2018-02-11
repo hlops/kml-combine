@@ -1,0 +1,22 @@
+<h4>server is running at port {{config.serverPort}}</h4>
+
+<table border="1">
+	<tr>
+		<th>#</th>
+		<th>client</th>
+		<th>active</th>
+		<th>start time</th>
+		<th>bytes received</th>
+		<th>action</th>
+	</tr>
+	{{#each clients}}
+		<tr>
+			<td>{{incremented @index}}</td>
+			<td>{{name}}</td>
+			<td>{{status.active}}</td>
+			<td>{{startTime}}</td>
+			<td>{{status.bytesReceived}}</td>
+			<td></td>
+		</tr>
+	{{/each}}
+</table>
