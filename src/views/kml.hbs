@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://earth.google.com/kml/2.2">
-	<Style id="yellowLineGreenPoly">
+<kml xmlns="http://www.opengis.net/kml/2.2"
+     xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+	<Folder>
+		<Style id="yellowLineGreenPoly">
 		<LineStyle>
-			 <color>7f00ffff</color>
-			 <width>4</width>
+			<color>7f00ffff</color>
+			<width>4</width>
 		</LineStyle>
 		<PolyStyle>
 			<color>7f00ff00</color>
 		</PolyStyle>
-	</Style>
+		</Style>
 
-	{{#each clients}}
-		<Placemark>
-			<name>{{name}}</name>
-			<styleUrl>#yellowLineGreenPoly</styleUrl>
-			<LineString>
+		{{#each clients}}
+			<Placemark>
+				<name>{{name}}</name>
+				<styleUrl>#yellowLineGreenPoly</styleUrl>
+				<LineString>
+					<tessellate>0</tessellate>
 					<coordinates>
-				{{#each queue.all}}
-						{{#each data}}
-							{{lat}},{{lon}}
+						{{#each queue.all}}
+							{{#each data}}
+								{{lat}},{{lon}}
+							{{/each}}
 						{{/each}}
-				{{/each}}
 					</coordinates>
-			</LineString>
-		</Placemark>
-	{{/each}}
+				</LineString>
+			</Placemark>
+		{{/each}}
+	</Folder>
 </kml>
