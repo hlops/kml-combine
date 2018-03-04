@@ -2,15 +2,14 @@
 <kml xmlns="http://www.opengis.net/kml/2.2"
      xmlns:gx="http://www.google.com/kml/ext/2.2">
   <Document>
-	<Folder>
 		<Style id="yellowLineGreenPoly">
-		<LineStyle>
-			<color>7f00ffff</color>
-			<width>4</width>
-		</LineStyle>
-		<PolyStyle>
-			<color>7f00ff00</color>
-		</PolyStyle>
+			<LineStyle>
+				<color>7f00ffff</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7f00ff00</color>
+			</PolyStyle>
 		</Style>
 
 		{{#each clients}}
@@ -29,5 +28,5 @@
 				</LineString>
 			</Placemark>
 		{{/each}}
-	</Folder>
+	</Document>
 </kml>
